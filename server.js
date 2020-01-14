@@ -21,7 +21,7 @@ app.prepare().then(() => {
   //   return app.render(req, res, '/posts', { id: req.params.id })
   // })
 
-  server.all('*', (req, res) => {
+  server.all('*', async (req, res) => {
     return handle(req, res)
   })
 
