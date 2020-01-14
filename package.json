@@ -1,0 +1,43 @@
+{
+  "name": "dynamic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "analyze": "cross-env ANALYZE=true npm run build",
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "cross-env NODE_ENV=production node server.js",
+    "compile": "lingui compile",
+    "add-locale": "lingui add-locale",
+    "extract": "lingui extract"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@lingui/cli": "^2.9.0",
+    "@lingui/loader": "^2.9.0",
+    "@lingui/macro": "^2.9.0",
+    "@lingui/react": "^2.9.0",
+    "babel-plugin-macros": "^2.8.0",
+    "express": "^4.17.1",
+    "next": "^9.1.7",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "typescript": "^3.7.4"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^9.1.7",
+    "cross-env": "^6.0.3"
+  },
+  "lingui": {
+    "sourceLocale": "en",
+    "localeDir": "./locales",
+    "srcPathDirs": [
+      "./pages/",
+      "./components/"
+    ],
+    "format": "lingui"
+  }
+}
