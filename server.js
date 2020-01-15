@@ -9,6 +9,8 @@ const handle = app.getRequestHandler()
 app.prepare().then(() => {
   const server = express()
 
+  server.use(express.static('public'));
+
   // server.get('/a', (req, res) => {
   //   return app.render(req, res, '/a', req.query)
   // })
